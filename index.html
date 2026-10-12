@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Muskan ✨ | Forever Yours, Mohin</title>
+  <meta name="description"
+    content="A magical birthday celebration crafted with love for Muskan from Mohin across every mile.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient Floating Background Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Audio Experience Controls -->
+  <div class="audio-control-bar" id="audio-bar">
+    <button id="music-toggle-btn" class="glass-pill-btn" aria-label="Toggle Rathinamo Music">
+      <span class="music-icon" id="music-icon">🎵</span>
+      <div class="music-meta">
+        <span class="music-label" id="music-label">Rathinamo (Female Ver.)</span>
+        <span class="music-sub">Tanisha Gnanavel</span>
+      </div>
+      <div class="sound-waves" id="sound-waves">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+  </div>
+
+  <!-- Local Audio File Element -->
+  <audio id="local-audio" loop preload="auto">
+    <source src="assets/music/WhatsApp Audio 2026-10-12 at 12.11.40 PM.mpeg" type="audio/mpeg">
+  </audio>
+
+  <!-- Opening Surprise Modal / Gift Envelope Entry with PIN Protection -->
+  <div class="welcome-overlay" id="welcome-overlay">
+    <div class="welcome-card glass-morphism">
+      <div class="envelope-stamp">🔐</div>
+      <p class="tagline">A special delivery for Muskan...</p>
+      <h1 class="welcome-title">Happy Birthday, Muskan</h1>
+      <p class="welcome-subtitle">Enter our secret love PIN to unlock your birthday surprise ✨</p>
+
+      <!-- PIN Input Display Boxes -->
+      <div class="pin-container">
+        <div class="pin-dots" id="pin-dots">
+          <input type="password" maxlength="1" class="pin-box" data-index="0" inputmode="numeric" pattern="[0-9]*"
+            autofocus>
+          <input type="password" maxlength="1" class="pin-box" data-index="1" inputmode="numeric" pattern="[0-9]*">
+          <input type="password" maxlength="1" class="pin-box" data-index="2" inputmode="numeric" pattern="[0-9]*">
+          <input type="password" maxlength="1" class="pin-box" data-index="3" inputmode="numeric" pattern="[0-9]*">
+        </div>
+        <div class="pin-error-msg" id="pin-error">Incorrect PIN, try again sweetheart ❤️</div>
+        <div class="pin-hint-text">💡 Hint: Tap anywhere to enter or try <span>1210</span> (or today's special date)
+        </div>
+      </div>
+
+      <!-- Quick Keypad for Mobile and Easy Entry -->
+      <div class="pin-keypad" id="pin-keypad">
+        <button type="button" class="key-btn" data-val="1">1</button>
+        <button type="button" class="key-btn" data-val="2">2</button>
+        <button type="button" class="key-btn" data-val="3">3</button>
+        <button type="button" class="key-btn" data-val="4">4</button>
+        <button type="button" class="key-btn" data-val="5">5</button>
+        <button type="button" class="key-btn" data-val="6">6</button>
+        <button type="button" class="key-btn" data-val="7">7</button>
+        <button type="button" class="key-btn" data-val="8">8</button>
+        <button type="button" class="key-btn" data-val="9">9</button>
+        <button type="button" class="key-btn key-clear" id="key-clear">C</button>
+        <button type="button" class="key-btn" data-val="0">0</button>
+        <button type="button" class="key-btn key-unlock" id="key-unlock">🔓</button>
+      </div>
+
+      <button class="open-gift-btn" id="enter-btn" style="margin-top: 1.2rem;">
+        <span>Unlock Surprise</span>
+        <svg class="sparkle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="currentColor" />
+        </svg>
+      </button>
+
+      <span class="click-hint">Turn up your volume for "Rathinamo" 🎶</span>
+    </div>
+  </div>
+
+  <main class="page-wrapper">
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <div class="floating-badge">✨ Made With All My Love &bull; From Mohin to Muskan</div>
+        <h1 class="hero-title">
+          Happy Birthday, <br>
+          <span class="highlight-script">Muskan</span>
+        </h1>
+        <p class="hero-lead">
+          Miles cannot dim what shines this bright. Today, the world celebrates the most gorgeous soul in it.
+        </p>
+
+        <!-- Distance to Heart Connection Indicator -->
+        <div class="distance-pill glass-card">
+          <div class="city-point">
+            <span class="dot pulse"></span>
+            <span class="label">Mohin</span>
+          </div>
+          <div class="connecting-line">
+            <div class="beating-heart">❤️</div>
+            <span class="distance-text">Zero Distance in Spirit</span>
+          </div>
+          <div class="city-point">
+            <span class="dot pulse"></span>
+            <span class="label">Muskan</span>
+          </div>
+        </div>
+
+        <!-- Couple Avatar Glow in Hero -->
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-ring pulse-ring"></div>
+          <img src="assets/images/birthday_cake.jpg" alt="Mohin & Muskan" class="hero-avatar-img">
+          <div class="avatar-heart-badge">💖</div>
+        </div>
+
+        <div class="hero-action-group">
+          <a href="#birthday-cake" class="cta-btn primary-btn">Blow the Candles 🎂</a>
+          <a href="#chapters-section" class="cta-btn glass-btn">Read Our Story 💌</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Emotional Message Chapters (The 3 Quotes) -->
+    <section class="chapters-section" id="chapters-section">
+      <div class="section-header">
+        <span class="section-tag">Words From My Soul</span>
+        <h2 class="section-title">Letters Across the Miles</h2>
+        <p class="section-subtitle">Every word straight from my heart to yours today</p>
+      </div>
+
+      <div class="chapters-grid">
+        <!-- Chapter 1 -->
+        <article class="chapter-card glass-card">
+          <div class="card-glow"></div>
+          <div class="chapter-number">Chapter 01</div>
+          <div class="quote-symbol">“</div>
+          <blockquote class="chapter-quote">
+            We may be apart today, but you are in every single thought I have. Thank you for making my world so
+            beautiful this year. Happy birthday.
+          </blockquote>
+          <div class="chapter-footer">
+            <span class="chapter-mood">💫 In Every Thought</span>
+            <button class="like-btn" aria-label="Send love"><span class="heart-icon">🤍</span></button>
+          </div>
+        </article>
+
+        <!-- Chapter 2 -->
+        <article class="chapter-card glass-card featured-chapter">
+          <div class="card-glow"></div>
+          <div class="featured-badge">Forever True</div>
+          <div class="chapter-number">Chapter 02</div>
+          <div class="quote-symbol">“</div>
+          <blockquote class="chapter-quote">
+            You are the best thing that happened to me this year. The distance is hard, but loving you is the easiest
+            thing I have ever done. Have a beautiful birthday.
+          </blockquote>
+          <div class="chapter-footer">
+            <span class="chapter-mood">🌹 The Easiest Love</span>
+            <button class="like-btn" aria-label="Send love"><span class="heart-icon">🤍</span></button>
+          </div>
+        </article>
+
+        <!-- Chapter 3 -->
+        <article class="chapter-card glass-card">
+          <div class="card-glow"></div>
+          <div class="chapter-number">Chapter 03</div>
+          <div class="quote-symbol">“</div>
+          <blockquote class="chapter-quote">
+            Today is all about you. Even from far away, I hope you feel how much you matter to me. This is just our
+            first chapter together, and I love our story.
+          </blockquote>
+          <div class="chapter-footer">
+            <span class="chapter-mood">📖 Just Chapter One</span>
+            <button class="like-btn" aria-label="Send love"><span class="heart-icon">🤍</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Polaroid Memories Gallery Section -->
+    <section class="memories-section">
+      <div class="section-header">
+        <span class="section-tag">Moments & Memories</span>
+        <h2 class="section-title">Our Beautiful Story</h2>
+        <p class="section-subtitle">Real moments filled with pure love, smiles, and warmth</p>
+      </div>
+
+      <div class="polaroid-showcase">
+        <!-- Photo 1: Couple Together Outdoors -->
+        <div class="polaroid-card polaroid-tilt-1">
+          <div class="pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="assets/images/couple_outdoor.png" alt="Mohin & Muskan Together" id="photo-1"
+              class="polaroid-photo">
+          </div>
+          <div class="polaroid-caption">
+            <span>Side by Side Always 🌸</span>
+            <small>Mohin & Muskan</small>
+          </div>
+        </div>
+
+        <!-- Photo 2: Muskan in Royal Blue Dress -->
+        <div class="polaroid-card polaroid-tilt-2">
+          <div class="pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="assets/images/muskan_blue_dress.png" alt="Birthday Queen Muskan" id="photo-2"
+              class="polaroid-photo">
+          </div>
+          <div class="polaroid-caption">
+            <span>The Birthday Queen 👑</span>
+            <small>Most beautiful girl in the world</small>
+          </div>
+        </div>
+
+        <!-- Photo 3: Couple Celebration Moments -->
+        <div class="polaroid-card polaroid-tilt-3">
+          <div class="pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="assets/images/couple_celebration.png" alt="Special Occasion Together" id="photo-3"
+              class="polaroid-photo">
+          </div>
+          <div class="polaroid-caption">
+            <span>Every Celebration With You 💫</span>
+            <small>My forever person</small>
+          </div>
+        </div>
+
+        <!-- Photo 4: Muskan Sweet Smile -->
+        <div class="polaroid-card polaroid-tilt-4">
+          <div class="pin"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="assets/images/muskan_sweet_smile.png" alt="Muskan's Radiant Smile" id="photo-4"
+              class="polaroid-photo">
+          </div>
+          <div class="polaroid-caption">
+            <span>That Sweetest Smile 💖</span>
+            <small>My peace & my world</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Birthday Cake & Wish Ceremony -->
+    <section class="cake-ceremony-section" id="birthday-cake">
+      <div class="ceremony-container glass-card">
+        <div class="ceremony-header">
+          <span class="mini-tag">Virtual Birthday Ritual</span>
+          <h2>Make A Wish & Blow the Candles</h2>
+          <p id="candle-instructions">Close your eyes, make the deepest wish in your heart, and tap the candles to blow
+            them out!</p>
+        </div>
+
+        <div class="cake-stage" id="cake-stage">
+          <!-- Realistic CSS & SVG Interactive Cake -->
+          <div class="cake-wrapper">
+            <div class="candles-rack">
+              <div class="candle candle-1" data-id="1">
+                <div class="flame" id="flame-1">
+                  <div class="flame-inner"></div>
+                </div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+              <div class="candle candle-2" data-id="2">
+                <div class="flame" id="flame-2">
+                  <div class="flame-inner"></div>
+                </div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+              <div class="candle candle-3" data-id="3">
+                <div class="flame" id="flame-3">
+                  <div class="flame-inner"></div>
+                </div>
+                <div class="wick"></div>
+                <div class="candle-body"></div>
+              </div>
+            </div>
+
+            <!-- Cake layers -->
+            <div class="cake-top-tier">
+              <div class="frosting-drops">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="cake-inscription">Happy Birthday Muskan</div>
+            </div>
+            <div class="cake-middle-tier">
+              <div class="ribbon-decor"></div>
+            </div>
+            <div class="cake-base-plate"></div>
+          </div>
+        </div>
+
+        <!-- Wish Confirmation Banner (shows after blowing candles) -->
+        <div class="wish-reveal-box" id="wish-reveal" style="display: none;">
+          <div class="confetti-emoji">🎉 ✨ 🎂 💖</div>
+          <h3>Your Wish Has Been Sent to the Stars!</h3>
+          <p>May every dream you hold come true this year, and may our next birthday celebration be hand in hand.</p>
+        </div>
+
+        <button class="blow-btn" id="blow-candles-btn">
+          <span class="btn-icon">💨</span>
+          <span>Click to Blow Candles</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Interactive Sweet Messages / Little Secrets -->
+    <section class="reasons-section">
+      <div class="section-header">
+        <span class="section-tag">Tap to Open</span>
+        <h2 class="section-title">Little Notes For You</h2>
+        <p class="section-subtitle">A few of the infinite reasons why you make my world brighter</p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass-card">
+              <div class="card-icon">✨</div>
+              <h3>Your Laugh</h3>
+              <span class="tap-hint">Tap to reveal</span>
+            </div>
+            <div class="flip-card-back glass-card">
+              <p>The sound that instantly turns my hardest days into pure peace. Even over a phone call, it's my
+                favorite music.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass-card">
+              <div class="card-icon">🌸</div>
+              <h3>Your Kindness</h3>
+              <span class="tap-hint">Tap to reveal</span>
+            </div>
+            <div class="flip-card-back glass-card">
+              <p>The gentleness with which you care for the world. You make everything and everyone around you feel
+                valued.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass-card">
+              <div class="card-icon">💫</div>
+              <h3>Our Future</h3>
+              <span class="tap-hint">Tap to reveal</span>
+            </div>
+            <div class="flip-card-back glass-card">
+              <p>Every mile we conquer now is just making the day we are finally reunited that much sweeter. I can't
+                wait for our forever.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass-card">
+              <div class="card-icon">💌</div>
+              <h3>My Promise</h3>
+              <span class="tap-hint">Tap to reveal</span>
+            </div>
+            <div class="flip-card-back glass-card">
+              <p>To always choose you, cherish you, respect you, and remind you every single day how deeply you are
+                loved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Sealed Love Letter Section -->
+    <section class="letter-section" id="letter-section">
+      <div class="letter-container">
+        <div class="letter-wax-card glass-card" id="letter-card">
+          <div class="letter-seal" id="letter-seal">
+            <div class="wax-stamp">💌</div>
+            <span>Click to Break Seal</span>
+          </div>
+
+          <div class="letter-inner-content" id="letter-content" style="display: none;">
+            <div class="letter-heading">To My Dearest Muskan,</div>
+            <p class="letter-body">
+              Looking back at this past year, the brightest moments all have one thing in common: <strong>you</strong>.
+            </p>
+            <p class="letter-body">
+              Even though distance separates our coordinates today, it has never once separated our hearts.
+              Loving you has shown me what patience, devotion, and real happiness feel like.
+            </p>
+            <p class="letter-body">
+              Thank you for being my favorite notification, my late-night comfort, my biggest inspiration, and my
+              greatest blessing.
+              Have the happiest, most radiant birthday today, Muskan.
+            </p>
+            <div class="letter-signoff">
+              <span>Forever & Always,</span>
+              <span class="signature">Yours, Mohin ❤️</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="birthday-footer">
+      <div class="footer-heart">💖</div>
+      <p class="footer-text">Built with all the love in the universe &bull; Happy Birthday Muskan, from Mohin</p>
+      <div class="footer-sparks">✨ 🌟 ✨</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
